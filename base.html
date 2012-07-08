@@ -16,11 +16,16 @@
     
     <!-- Site and template specific CSS -->
     <style type="text/css" media="screen">
+        {% comment %}
         /* Use style.css to provide site-wide CSS */
         /* Remove this include and host style.css once deployed */
+        {% endcomment %}
         {% include "style.css" %}
         
+        {% comment %}
         /* Template specific CSS */
+        {% endcomment %}
+        
         {% block extracss %}
         {% endblock %}
     </style>
@@ -44,11 +49,15 @@
     <footer>
         {% include "footer.html" %}
     </footer>
-    <!-- Script go at the bottom, because that's where they belong -->
+    
+    <!-- Scripts go at the bottom, because that's where they belong -->
     <!-- Load JQuery 1.7.2 from the Google CDN -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
+    {% comment %}
     <!-- Template specific script files -->
+    {% endcomment %}
+    
     {% block scripts %}
     {% endblock %}
 
