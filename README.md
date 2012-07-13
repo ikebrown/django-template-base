@@ -8,6 +8,8 @@ This project aims to create a complete base.html (and dependent files) that you 
 
 ## How to use
 
+**To avoid backwards compatible changes, you may want to fork this repository before including it in your project**
+
 These instructions assume that you're already using git to manage your project.
 
 If you haven't already, create a templates directory in your project
@@ -43,4 +45,13 @@ TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
   "templates.base.base_processer.js_addins",
 )
 
+```
+
+And include the new DJANGO_BASE_TEMPLATE dictionary, shown here with the default values:
+
+```python
+DJANGO_BASE_TEMPLATE = {
+    'GOOGLE_ANALYTICS': None,       # String, begins with UA-
+    'TYPEKIT': None,                # String
+}
 ```
