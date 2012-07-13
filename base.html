@@ -79,6 +79,12 @@
 
     </script>
     {% endif %}
+    
+    {% if TYPEKIT %}
+    <script type="text/javascript" src="https://use.typekit.com/{{ TYPEKIT }}.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    {% endif %}
+    
     <!-- Finally, a script tag! -->
     <script>
         /* document.ready */
