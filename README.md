@@ -36,6 +36,6 @@ Then, towards the bottom (I like to do it near the template paths), add update t
 
 ```python
    TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
-      "template.base.base_process.js_addons",
+      "templates.base.base_processer.js_addins",
    )
 ```
