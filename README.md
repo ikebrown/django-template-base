@@ -1,7 +1,7 @@
 django-template-base
 ===========================
 
-A simple boilerplate for django templates based on Twitter Bootstrap and select parts of the HTML5 Boilerplate project to get you up and running quickly.
+A simple boilerplate for django templates based on Twitter Bootstrap and select parts of the HTML5 Boilerplate project designed to get you up and running quickly.
 
 This project aims to create a complete base.html (and dependent files) that you can use as a starting point for templates in your django projects. Currently support for Typekit and Google Analytics is baked in.
 
@@ -10,6 +10,9 @@ django-template-base sets you up with the following:
   - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
   - [HTML5Shiv](http://code.google.com/p/html5shiv/)
   - [jQuery](http://jquery.com/)
+
+And allows you to optionally include these:
+
   - [Typekit](http://typekit.com)
   - [Google Analytics](http://google.com/analytics)
   
@@ -40,7 +43,7 @@ Create a couple of required files in your templates directory
 cd templates && touch style.css && touch header.html && touch footer.html && touch __init__.py
 ```
 
-Finally, add out template processor to your settings.py files. The best practice for doing this is to extend the existing TEMPLATE_CONTEXT_PROCESSORS variable
+Finally, add our template processor to your settings.py files. The best practice for doing this is to extend the existing TEMPLATE_CONTEXT_PROCESSORS variable
 
 Add this to the top of your settings.py:
 
