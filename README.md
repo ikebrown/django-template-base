@@ -10,4 +10,26 @@ This project aims to create a complete base.html (and dependent files) that you 
 
 Simply clone this project into your templates folder and go nuts :-)
 
-Use the sample.html as a base for any additional template files that you create
+If you haven't already, create a templates directory in your project and cd into it
+
+   mkdir templates && cd templates
+   
+Add the django-template-base into your templates directory as a submodule named "base"
+
+   git submodule add git@github.com:sesh/django-template-base.git base
+
+Create a couple of required files in your templates directory
+    
+   touch style.css && touch header.html && touch footer.html && touch __init__.py
+
+Finally, add out template processor to your settings.py files. The best practice for doing this is to extend the existing TEMPLATE_CONTEXT_PROCESSORS variable
+
+Add this to the top of your settings.py:
+
+   import django.conf.global_settings as DEFAULT_SETTINGS
+   
+Then, towards the bottom (I like to do it near the template paths), add update the TEMPLATE_CONTEXT_PROCESSORS as so:
+
+   TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
+      "template.base.base_process.js_addons",
+   )
