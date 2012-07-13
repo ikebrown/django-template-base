@@ -1,9 +1,19 @@
-django-template-boilerplate
+django-template-base
 ===========================
 
-A simple boilerplate for django templates based on Twitter Bootstrap and parts of the HTML5 Boilerplate project.
+A simple boilerplate for django templates based on Twitter Bootstrap and select parts of the HTML5 Boilerplate project to get you up and running quickly.
 
-This project aims to create a complete base.html (and dependent files) that you can use as a starting point for templates in your django projects.
+This project aims to create a complete base.html (and dependent files) that you can use as a starting point for templates in your django projects. Currently support for Typekit and Google Analytics is baked in.
+
+django-template-base sets you up with the following:
+
+  - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+  - [HTML5Shiv](http://code.google.com/p/html5shiv/)
+  - [jQuery](http://jquery.com/)
+  - [Typekit](http://typekit.com)
+  - [Google Analytics](http://google.com/analytics)
+  
+Feel free to fork this project if you'd like to create a different stack.
 
 
 ## How to use
@@ -55,3 +65,5 @@ DJANGO_BASE_TEMPLATE = {
     'TYPEKIT': None,                # String
 }
 ```
+
+Use the provided sample.html file as a starting point for your own templates.
