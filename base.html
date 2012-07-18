@@ -13,7 +13,7 @@
     {% block meta %}{% endblock %}
 
     <!-- Twitter Bootstrap 2.0.4 - TODO: Find appropriate CDN -->
-    <link rel="stylesheet" href="//current.bootstrapcdn.com/bootstrap-v204/css/bootstrap-combined.min.css">
+    <link rel="stylesheet" href="http://d.brntn.me/bootstrap/2.0.4/css/bootstrap.min.css">
     
     <!-- Site and template specific CSS -->
     <style type="text/css" media="screen">
@@ -39,20 +39,22 @@
   </head>
 
 <body>
-    <div class="container">
+    <div class="wrapper">
         
-        <header>
-            {% include "header.html" %}
-        </header>
+        <div class="container main">
+    
+            <header>
+                {% include "header.html" %}
+            </header>
+            <div class="content">
+                {% block container %}{% endblock %}
+            </div>
+        </div>
 
-        {% block container %}{% endblock %}
-        
         <footer>
             {% include "footer.html" %}
         </footer>
-    </div>
-    
-    
+    </div>    
     <!-- Scripts go at the bottom, because that's where they belong -->
     <!-- Load JQuery 1.7.2 from the Google CDN -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
